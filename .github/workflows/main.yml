@@ -1,0 +1,20 @@
+name: Poke
+on:
+  push:
+    branches: [main]
+
+jobs:
+  nodeset:
+    runs-on: ubuntu-latest
+
+    defaults:
+      run:
+        working-directory: backend
+
+    steps:
+      - name: checkout repo
+        uses: actions/checkout@v4
+
+      - name: initialise node
+        uses: actions/setup-node@v4
+    
